@@ -28,12 +28,11 @@ export class AuthController {
 
   @ApiOperation({ summary: 'Register User' })
   @Post('/register')
-  @UseInterceptors(FileInterceptor('passport_photo'))
+  // @UseInterceptors(FileInterceptor('passport_photo'))
   register(
     @Body() createUserDto: CreateUserDto, role_id: number,
-    @UploadedFile() passport_photo,
   ): Promise<{ token: string; id: number; }> {
-    return this.authService.register(createUserDto, role_id, passport_photo);
+    return this.authService.register(createUserDto, role_id);
   }
 
   @Patch('change-password/:id')

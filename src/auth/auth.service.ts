@@ -27,12 +27,8 @@ export class AuthService {
   async register(
     createUserDto: CreateUserDto,
     role_id: number,
-    passport_photo: any,
   ) {
     try {
-      if (!passport_photo) {
-        passport_photo = 'defaultpic.jpg';
-      }
       if (!role_id) {
         role_id = 3;
       }
