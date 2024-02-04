@@ -58,13 +58,24 @@ export class CreateTourDto {
   @IsNotEmpty()
   @IsNumber()
   readonly city_id: number;
+  
+  @ApiProperty({
+    description: 'Count of tour type days',
+    type: Number,
+    example: 15,
+  })
+  @IsNotEmpty()
+  @IsNumber()
+  readonly days: number;
 
   @ApiProperty({
-    description: 'ID of hotel if exists',
+    description: 'Count of tour nights',
     type: Number,
-    example: 1,
+    example: 15,
   })
-  readonly hotel_id: number;
+  @IsNotEmpty()
+  @IsNumber()
+  readonly nights: number;
 
   @ApiProperty({
     description: 'ID of tour type',

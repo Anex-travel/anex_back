@@ -9,8 +9,6 @@ import {
   HasOne,
   HasMany,
 } from 'sequelize-typescript';
-import { Flight } from 'src/flight/flight.model';
-import { Hotel } from 'src/hotel/hotel.model';
 import { Tour } from 'src/tours/tours.model';
 import { User } from 'src/user/user.model';
 
@@ -39,15 +37,4 @@ export class Order extends Model<Order> {
   @BelongsTo(() => Tour)
   tours: Tour[];
 
-  @ForeignKey(() => Hotel)
-  @Column({ type: DataType.INTEGER, allowNull: true })
-  hotel_id: number;
-  @BelongsTo(() => Hotel)
-  hotels: Hotel[];
-
-  @ForeignKey(() => Flight)
-  @Column({ type: DataType.INTEGER, allowNull: true })
-  flight_id: number;
-  @BelongsTo(() => Flight)
-  flights: Flight[];
 }

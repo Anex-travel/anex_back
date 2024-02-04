@@ -14,22 +14,6 @@ export class CreateTypeDto {
   readonly name: string;
 
   @ApiProperty({
-    description: 'Count of tour type days',
-    type: Number,
-    example: 15,
-  })
-  @IsNotEmpty()
-  @IsNumber()
-  readonly days: number;
-
-  @ApiProperty({
-    description: 'This is optional column for future features',
-    type: Number,
-    example: 500000,
-  })
-  readonly price: number;
-
-  @ApiProperty({
     description: 'This clomnu for descriptions ',
     type: String,
     example: 'This column is necessary to form tour list',

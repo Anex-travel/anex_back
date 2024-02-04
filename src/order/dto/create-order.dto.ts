@@ -25,18 +25,4 @@ export class CreateOrderDto {
     example: 1,
   })
   readonly tour_id: number;
-
-  @ApiProperty({
-    description: 'ID of hotel (if exists)',
-    type: Number,
-    example: 1,
-  })
-  readonly hotel_id: number;
-
-  @ApiProperty({
-    description: 'ID of flight (if exists)',
-    type: Number,
-    example: 1,
-  })
-  readonly flight_id: number;
 }

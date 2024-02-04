@@ -2,7 +2,6 @@
 import { DataType, Table, Model, Column, ForeignKey, BelongsTo } from 'sequelize-typescript';
 import { City } from 'src/city/city.model';
 import { Country } from 'src/country/country.model';
-import { Hotel } from 'src/hotel/hotel.model';
 import { Type } from 'src/type/type.model';
 // import { ApiProperty } from '@nestjs/swagger';
 
@@ -33,6 +32,12 @@ export class Tour extends Model<Tour> {
   stars: number;
 
   @Column({ type: DataType.INTEGER })
+  days: number;
+
+  @Column({ type: DataType.INTEGER })
+  nigths: number;
+
+  @Column({ type: DataType.INTEGER })
   price: number;
 
   @ForeignKey(() => Country)
@@ -46,12 +51,6 @@ export class Tour extends Model<Tour> {
   city_id: number;
   @BelongsTo(() => City)
   city: City[];
-
-  @ForeignKey(() => Hotel)
-  @Column({ type: DataType.INTEGER })
-  hotel_id: number;
-  @BelongsTo(() => Hotel)
-  hotel: Hotel[];
 
   @ForeignKey(() => Type)
   @Column({ type: DataType.INTEGER })

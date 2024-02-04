@@ -31,14 +31,13 @@ export class Type extends Model<Type> {
   @Column({ type: DataType.INTEGER })
   days: number;
 
+  @Column({ type: DataType.INTEGER })
+  nights: number;
+
   // @ApiProperty({ example: 'P@$$w0Rd', description: 'Admin password' })
   @Column({ type: DataType.INTEGER })
   price: number;
 
   @Column({ type: DataType.STRING })
   description: string;
- 
-  @HasMany(()=>Tour)
-  tours:Tour[]
-  // hasMany tours
 }

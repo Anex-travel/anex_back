@@ -20,13 +20,6 @@ export class CreateUserDto {
   readonly fullname: string;
 
   @ApiProperty({
-    description: 'URL for passport_photo',
-    type: String,
-    example: 'http://localhost:3000/1390aa5f-1b52-46b6-b75b-6915aedd9669.jpg',
-  })
-  readonly passport_photo: string;
-
-  @ApiProperty({
     description: 'User phone based on "UZ" region',
     type: String,
     example: '+998951234567',

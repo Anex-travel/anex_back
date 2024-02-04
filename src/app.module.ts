@@ -8,8 +8,6 @@ import { ToursModule } from './tours/tours.module';
 import { RolesModule } from './roles/roles.module';
 import { CountryModule } from './country/country.module';
 import { CityModule } from './city/city.module';
-import { HotelModule } from './hotel/hotel.module';
-import { FlightModule } from './flight/flight.module';
 import { MediaModule } from './media/media.module';
 import { ServeStaticModule } from '@nestjs/serve-static';
 import { resolve } from 'path';
@@ -42,8 +40,6 @@ import { AuthModule } from './auth/auth.module';
     RolesModule,
     CountryModule,
     CityModule,
-    HotelModule,
-    FlightModule,
     MediaModule,
     TypeModule,
     OrderModule,

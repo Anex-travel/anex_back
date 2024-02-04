@@ -40,7 +40,6 @@ export class AuthService {
       const user = await this.userService.create({
         ...createUserDto,
         password: hashPassword,
-        passport_photo,
         role_id,
       });
       const token = await this.generateToken(user);

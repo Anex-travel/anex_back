@@ -18,6 +18,4 @@ export class Role extends Model<Role> {
   @Column({ type: DataType.STRING })
   description: string;
 
-  @HasMany(() => User)
-  users: User[];
 }

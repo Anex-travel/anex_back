@@ -26,10 +26,6 @@ export class User extends Model<User> {
   @Column({ type: DataType.STRING })
   fullname: string;
 
-  // @ApiProperty({ example: 'admin@gmail.com', description: 'User name' })
-  @Column({ type: DataType.STRING })
-  passport_photo: string;
-
   // @ApiProperty({ example: 'P@$$w0Rd', description: 'Admin password' })
   @Column({
     type: DataType.STRING,
